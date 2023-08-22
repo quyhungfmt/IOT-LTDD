@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <!-- ionic.io usage -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+    </script>
+    <script defer src="./index.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-auth-compat.js"></script>
+    <title>lOGIN</title>
+</head>
+<body>
+    <section>
+        <div class="boxLG_RGT">
+            <div class="boxValue">
+                <div class="button-box">
+                    <div id="btHlogisn" class="btHlogin"></div>
+                    <button type="button" class="btn-head" onclick="login()">Login</button>
+                    <button type="button" class="btn-head" onclick="register()">Register</button>
+                </div>
+                <div class="boxLogin">
+                    <form action="" id="formLogin" class="formLogin" onsubmit="return validationLogin()">
+                        <!-- input Email  -->
+                        <div class="inputBox" id="boxEmail">
+                            <ion-icon name="mail"></ion-icon>
+                            <input id="inputEmail" name="inputEmail" type="text" placeholder="Email" oninput="validateEmail()">
+                            <label for="">Email</label>
+                            <div class="line-error"></div>
+                            <span id="errorEmail"></span>
+                        </div>
+                        <!-- input password -->
+                        <div class="inputBox" id="boxPass">
+                            <ion-icon name="key"></ion-icon>
+                            <input id="inputPass" name="inputPass" type="password" placeholder="Password" oninput="validatePass()" >
+                            <label id = "ds" class="title" for="">Password</label> 
+                            <div class="line-error"></div>
+                            <span id="errorPass"></span>
+                        </div>
+                        <div class="lost">
+                            <label for=""><input type="checkbox">Nhớ Mật Khẩu!</label>
+                            <a href="">Quên Mật Khẩu?</a>
+                        </div>
+                        <!-- button login -->
+                        <button type="submit" id="btnLg" class="BTlg_Rst" onclick="validationLogin()">LOGIN</button>
+                        <!-- account register  -->
+
+                        <div class="registerLink">
+                            <p>Chưa có tài khoản ?</p>
+                            <a href="" onclick="register(); return false;" >Tạo tài khoản</a>
+                        </div>
+                        <div class="orlogin">
+                            <hr>
+                                OR
+                            <hr>
+                        </div>
+                        <div class="fb-gg">
+                            <ion-icon class="logo" name="logo-facebook"></ion-icon>
+                            <ion-icon class="logo" name="logo-google"></ion-icon>
+                        </div>
+                    </form>
+            </div>
+            <div class="boxRegister">
+                    <!-- register -->
+                    <form action="" id="register" class="register" onsubmit="return validationRegister()" name="formRegister">
+                        <!-- input Email  -->
+                        <div class="inputBox" id="box-mail2">
+                            <ion-icon name="mail"></ion-icon>
+                            <input id="inputEmail2" name="inputEmail" type="text" placeholder="Email" oninput="validateEmail2()">
+                            <label for="">Email</label>
+                            <div  class="line-error"></div> 
+                            <span id="errorEmail2"></span>
+                        </div>
+                    <!-- input password -->
+                        <div class="inputBox" id="box-pass2">
+                            <ion-icon name="key"></ion-icon>
+                            <input id="inputPass2" name="inputPass" type="password" placeholder="Password" oninput="validatePass2()">
+                            <label for="">Password</label>
+                            <div class="line-error"></div> 
+                            <span id="errorPass2" ></span>
+                        </div>
+                        <div class="inputBox" id="pass2Again">
+                            <ion-icon name="key"></ion-icon>
+                            <input id="passAgain" name="inputPass" type="password" placeholder="Confirm Password" oninput="validatePassAgain()">
+                            <label for="">Confirm Password</label> 
+                            <div  class="line-error"></div> 
+                            <span id="errorpass2Again"></span>
+                        </div>
+                        
+                        <input type="checkbox" id="agree" class="checkagree" ><b class="agree" id="ifagree"> I agree to the terms & conditions</b>
+                        <button id="btnRgt" class="BTlg_Rst" type="submit">Register</button>
+                    </form>
+                    
+                    <!-- forgot password -->
+                    
+            </div>
+        </div>
+    </section> 
+</body>
+</html>
