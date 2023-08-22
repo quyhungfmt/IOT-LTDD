@@ -11,15 +11,12 @@ const firebaseApp = firebase.initializeApp({
   const db = firebaseApp.firestore();
   const auth = firebaseApp.auth();
 
- const onAuth = () => {
-    console.log("none")
-    firebase.auth().onAuthStateChanged((user) => {
-        if (user) {
-          // User is signed in, see docs for a list of available properties
-          window.location.href = "./src/Screen/Home/home.html"
-          // ...
-        } else {
-          window.location.href = "./src/Screen/Login/login.html"
-        }
+const logout = () => {
+    firebase.auth().signOut().then(() => {
+        console.log("out")
+        window.location.href = "../Login/login.html"
+      }).catch((error) => {
+        // An error happened.
+        console.log(error.message)
       });
- }
+}
