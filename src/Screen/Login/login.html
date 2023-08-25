@@ -20,19 +20,19 @@
                         <!-- input Email  -->
                         <h2>Login</h2>
                         <div class="inputBox" id="boxEmail">
-                            <label for="" class="title">Email</label>
                             <ion-icon class="icons" name="mail"></ion-icon>
-                            <input id="inputEmail" name="inputEmail" type="text" placeholder="Email" oninput="validateEmail()">
-                            <div class="line-error"></div>
-                            <span class="error" id="errorEmail">cc</span>
+                            <input id="inputEmail" type="text" placeholder="Email" oninput="validateEmail(), showtitleE()">
+                            <label for="" id="titleE">Email</label> 
+                            <div class="lineError" id="lineEmail"></div>
+                            <span class="error" id="errorEmail"></span>
                         </div>
                             <!-- input password -->
                         <div class="inputBox" id="boxPass">
-                            <label class="title" for="">Password</label> 
                             <ion-icon class="icons" name="key"></ion-icon>
-                            <input id="inputPass" name="inputPass" type="password" placeholder="Password" oninput="validatePass()" >
-                            <div class="line-error"></div>
-                            <span class="error" id="errorPass">cc</span>
+                            <input id="inputPass"  type="password" placeholder="Password" oninput="validatePass(),showtitleP()" >
+                            <label id="titleP" for="">Password</label> 
+                            <div class="lineError" id="linePass"></div>
+                            <span class="error" id="errorPass"></span>
                         </div>
                         <div class="lost">
                             <label for=""><input type="checkbox">Nhớ Mật Khẩu!</label>

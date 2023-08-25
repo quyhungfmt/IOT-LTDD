@@ -35,6 +35,9 @@ h2 {
     box-shadow: 0 0 60px blue;
     border-radius: 15px;
 }
+.BoxLogin:hover h2 {
+    color: #45f3ff;
+}
 .boxValue {
     width: 100%;
     height: 100%;
@@ -63,30 +66,51 @@ h2 {
 .inputBox input{
  height: 40%;
  width: 80%;
+ color:#fff;
+ font-size: 15px;
  border: none;
  outline: none;
  background-color: transparent;
  margin-top: 7%;
  padding-left: 5%;
 }
-.formLogin .title {
+.formLogin .inputBox label {
     position: absolute;
-    color: #fff;
+    color: transparent;
     font-weight: 500;
+    font-size: 14px;
+    pointer-events: none;
+    transition: .5s;
+    transform: translate(-320px,39px);
 }
+/* .formLogin .inputBox input:focus ~ label,
+.formLogin .inputBox input:invalid ~ label{
+    color: #45f3ff;
+    transition: .5s;
+    transform: translate(-320px,15px);
+} */
+.inputBox input::placeholder {
+    color: rgba(225, 225, 225, 0.7);
+}
+
 .icons{
     position: absolute;
     margin-top: 38px;
     font-size: 110%;
+    color: rgba(225, 225, 225, 0.7);
 }
 .error{
     position: absolute;
     display: flex;
     margin-left: 30px;
+    color: red;
 }
-.line-error {
+#inputPass {
+    border-bottom: red;
+}
+.lineError {
     height: 2px;
-    background-color: red;
+    background-color: #fff;
     width: 350px;
     margin-left: 30px;
 }
@@ -98,11 +122,14 @@ h2 {
 .formLogin .btnlogin {
     background-color: gainsboro;
     height: 10%;
-    width: 90%;
+    width: 80%;
     margin-top: 10px;
     border: none;
     border-radius: 10px;
 
+}
+.btnlogin:hover {
+    background: linear-gradient(to right, yellow, red)
 }
 .orlogin {
     display: flex;
@@ -114,6 +141,8 @@ hr{
     margin-top: 4%;
     border: black;
 }
+
+ /* chu xong nha cu sang */
 b {
     color: #fff;
 }
