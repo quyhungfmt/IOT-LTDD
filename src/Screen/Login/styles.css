@@ -5,194 +5,118 @@
 }
 section {
     min-height: 100vh;
-    width: 100%;
     background: url(../../Assets/backgrounglogin.jpg)no-repeat;
     background-size: cover;
     background-position: center;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
 }
-
-.boxLG_RGT {
-    background-color: rgba(225, 225, 225, 0.2);
+.BoxLogin {
     border: 4px solid rgba(225, 225, 225, 0.1);
-    height: 440px;
-    width: 360px;
-    top: -70%;
-    left: 33%;
-    position: absolute;
-    transform: translate(0%, 110%);
+    height: 500px;
+    width: 400px;
     transition: .3s;
     border-radius: 5px;
+    overflow: hidden;
 }
-.boxLG_RGT:hover {
+h2 {
+    color: #fff;
+    font-size: 40px;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BoxLogin:hover {
     box-shadow: 0 0 60px blue;
     border-radius: 15px;
 }
-.boxLG_RGT .boxLogin {
-    justify-content: center;
-    align-items: center;
-    display:flex;
-    width : 300px;
-    height: 350px;
-    position: absolute; 
-    left: 30px;
-    top: 65px;
-    transition: 1s;
-}
-.boxLogin.is {     
-    transform: translate(0px, -550px);
-    transition: .1s;
-}
-
-.button-box {
-    background-color:transparent;
-    top:10px;
-    left:80px;
-    width:200px;
-    height:40px;
-    box-shadow: 0 0 20px 10px rgb(181, 219, 237);
-    justify-content: center;
-    display:flex;
-    border-radius:10px;
-    position: relative;
-} 
-.button-box:hover {
-    background: linear-gradient(to right, yellow, red)
-}
-.btHlogin {
-    background: linear-gradient(to right, blue ,white);
-    position: absolute;
-    width: 100px;
-    height:40px;
-    left:0px;
-    border-radius:10px;
-    transition: .5s;
-}
-.btHlogin.register {
-    background: linear-gradient(to right, blue ,white);
-    position: absolute;
-    width: 100px;
-    height:40px;
-    left:100px;
-    border-radius:10px;
-    transition: .5s;
-}
-.btn-head {
-    width:110px;
-    height: 40px;
-    border-radius: 10px;
-    border:none;
-    background-color: transparent;
-    position:relative;
-    cursor: pointer;
-}
-.inputBox {
-    padding:6px;
-    height:90px;
-}
-.inputBox input {
-    height:30px;
-    width: 280px;
-    outline: none;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid #fff;
-}
-.inputBox ion-icon {
-    color:white;
-    position:relative;
-    top:30px;
-    left:-20px;
-}
-input::placeholder {
-    color: rgba(225, 225, 225, 0.8);
-}
-.inputBox label {
-    color: transparent;
-    position:absolute;
-    margin-left: -94%;
-    margin-top: 5px;
-    transition: .5s;
-    pointer-events: none;
-}
-.inputBox input:focus ~ label,
-.inputBox input:invalid ~ label {
-    margin-top: -10px;
-    color:#fff;
-}
-.lost{
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 10px;
-}
-.lost label {
-    color: rgb(146, 33, 140);
-    display: flex;
-    justify-content: space-between;
-    width: 40%;
-}
-.BTlg_Rst {
+.boxValue {
     width: 100%;
-    height: 40px;
+    height: 100%;
+}
+.buttonBox {
+    background-color:transparent;
+    box-shadow: 0 0 20px 10px rgb(181, 219, 237);
+    display:flex;
+    border-radius:10px;
+    height: 10%;
+    width: 50%;
+    margin-left: 25%;
+    position: relative;
+}
+.boxLogin {
+    height: 90%;
+    margin-top: 1%;
+}
+.formLogin {
+    height: 100%;
+}
+.formLogin .inputBox {
+    height: 20%;
+    margin-bottom: 2%;
+}
+.inputBox input{
+ height: 40%;
+ width: 80%;
+ border: none;
+ outline: none;
+ background-color: transparent;
+ margin-top: 7%;
+ padding-left: 5%;
+}
+.formLogin .title {
+    position: absolute;
+    color: #fff;
+    font-weight: 500;
+}
+.icons{
+    position: absolute;
+    margin-top: 38px;
+    font-size: 110%;
+}
+.error{
+    position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10px;
-    background: linear-gradient(to right, blue,white);
+    margin-left: 30px;
 }
-.BTlg_Rst:hover {
-    background: linear-gradient(to right, yellow,red);
+.line-error {
+    height: 2px;
+    background-color: red;
+    width: 350px;
+    margin-left: 30px;
 }
-.registerLink {
+.formLogin .lost {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 10px;
+
 }
-.orlogin  {
+.formLogin .btnlogin {
+    background-color: gainsboro;
+    height: 10%;
+    width: 90%;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+
+}
+.orlogin {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 4%;
 }
 hr{
     flex-grow: 1;
-    margin-top: 20px;
+    background-color: black;
+    margin-top: 4%;
+    border: black;
+}
+b {
+    color: #fff;
 }
 .fb-gg {
-    display: flex;
-    justify-content: center;
+    background-color: burlywood;
 }
-.fb-gg ion-icon {
-    font-size: 2em;
-    padding: 10px;
-    color: blue;
-}
-
-.boxLG_RGT .boxRegister {
-    position: absolute;
-    width : 300px;
-    height: 330px;
-    left: 30px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: -500px;
-    left: 30px;
-    transition:.1s;
-}
-.boxRegister.is {
-    transform: translate(0px,570px);
-    display: flex;
-    transition: 1s;
-}
-.agree {
-    margin-left: 10px;
-    color: black;
-}
-#btnRgt {
-    margin-top: 10px;
-}
-span {
-    color: red;
-}
-

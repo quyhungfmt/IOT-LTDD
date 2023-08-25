@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
     <link rel="stylesheet" href="styles.css">
     <!-- ionic.io usage -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -14,46 +15,34 @@
 </head>
 <body>
     <section>
-        <div class="boxLG_RGT">
-            <div class="boxValue">
-                <div class="button-box">
-                    <div id="btHlogisn" class="btHlogin"></div>
-                    <button type="button" class="btn-head" onclick="login()">Login</button>
-                    <button type="button" class="btn-head" onclick="register()">Register</button>
-                </div>
-                <div class="boxLogin">
+        <div class="BoxLogin">
                     <form action="" id="formLogin" class="formLogin" onsubmit="return validationLogin()">
                         <!-- input Email  -->
+                        <h2>Login</h2>
                         <div class="inputBox" id="boxEmail">
-                            <ion-icon name="mail"></ion-icon>
+                            <label for="" class="title">Email</label>
+                            <ion-icon class="icons" name="mail"></ion-icon>
                             <input id="inputEmail" name="inputEmail" type="text" placeholder="Email" oninput="validateEmail()">
-                            <label for="">Email</label>
                             <div class="line-error"></div>
-                            <span id="errorEmail"></span>
+                            <span class="error" id="errorEmail">cc</span>
                         </div>
-                        <!-- input password -->
+                            <!-- input password -->
                         <div class="inputBox" id="boxPass">
-                            <ion-icon name="key"></ion-icon>
+                            <label class="title" for="">Password</label> 
+                            <ion-icon class="icons" name="key"></ion-icon>
                             <input id="inputPass" name="inputPass" type="password" placeholder="Password" oninput="validatePass()" >
-                            <label id = "ds" class="title" for="">Password</label> 
                             <div class="line-error"></div>
-                            <span id="errorPass"></span>
+                            <span class="error" id="errorPass">cc</span>
                         </div>
                         <div class="lost">
                             <label for=""><input type="checkbox">Nhớ Mật Khẩu!</label>
                             <a href="">Quên Mật Khẩu?</a>
                         </div>
-                        <!-- button login -->
-                        <button type="submit" id="btnLg" class="BTlg_Rst" onclick="validationLogin()">LOGIN</button>
-                        <!-- account register  -->
-
-                        <div class="registerLink">
-                            <p>Chưa có tài khoản ?</p>
-                            <a href="" onclick="register(); return false;" >Tạo tài khoản</a>
-                        </div>
+                            <!-- button login -->
+                        <button type="submit" id="btnLg" class="btnlogin" onclick="validationLogin()">LOGIN</button>
                         <div class="orlogin">
                             <hr>
-                                OR
+                                <b>OR</b>
                             <hr>
                         </div>
                         <div class="fb-gg">
@@ -62,41 +51,6 @@
                         </div>
                     </form>
             </div>
-            <div class="boxRegister">
-                    <!-- register -->
-                    <form action="" id="register" class="register" onsubmit="return validationRegister()" name="formRegister">
-                        <!-- input Email  -->
-                        <div class="inputBox" id="box-mail2">
-                            <ion-icon name="mail"></ion-icon>
-                            <input id="inputEmail2" name="inputEmail" type="text" placeholder="Email" oninput="validateEmail2()">
-                            <label for="">Email</label>
-                            <div  class="line-error"></div> 
-                            <span id="errorEmail2"></span>
-                        </div>
-                    <!-- input password -->
-                        <div class="inputBox" id="box-pass2">
-                            <ion-icon name="key"></ion-icon>
-                            <input id="inputPass2" name="inputPass" type="password" placeholder="Password" oninput="validatePass2()">
-                            <label for="">Password</label>
-                            <div class="line-error"></div> 
-                            <span id="errorPass2" ></span>
-                        </div>
-                        <div class="inputBox" id="pass2Again">
-                            <ion-icon name="key"></ion-icon>
-                            <input id="passAgain" name="inputPass" type="password" placeholder="Confirm Password" oninput="validatePassAgain()">
-                            <label for="">Confirm Password</label> 
-                            <div  class="line-error"></div> 
-                            <span id="errorpass2Again"></span>
-                        </div>
-                        
-                        <input type="checkbox" id="agree" class="checkagree" ><b class="agree" id="ifagree"> I agree to the terms & conditions</b>
-                        <button id="btnRgt" class="BTlg_Rst" type="submit">Register</button>
-                    </form>
-                    
-                    <!-- forgot password -->
-                    
-            </div>
-        </div>
     </section> 
 </body>
 </html>

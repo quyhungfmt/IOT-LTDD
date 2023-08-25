@@ -1,7 +1,10 @@
 var lg = document.querySelector(".boxLogin");
 var rgt = document.querySelector(".boxRegister");
-var bt = document.querySelector(".btHlogin");
+var btL = document.getElementById("btHlogin");
+var btR = document.getElementById("btHregister");
 var ifagree = document.getElementById("ifagree");
+
+
 var error_email = document.getElementById("inputEmail")
 var error_pass = document.getElementById("inputPass")
 var error_email2 = document.getElementById("inputEmail2")
@@ -112,6 +115,7 @@ const loginse = () => {
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
+      console.log(errorCode)
     });
 }
 function validationLogin () {
@@ -215,7 +219,13 @@ function validationRegister () {
 
 
 
-
+/*
+auth/invalid-email: Địa chỉ email không hợp lệ.
+auth/user-disabled: Tài khoản người dùng đã bị vô hiệu hóa.
+auth/user-not-found: Không tìm thấy người dùng với địa chỉ email đã cho.
+auth/wrong-password: Mật khẩu không đúng.
+auth/network-request-failed: Lỗi kết nối mạng1.
+*/
 
 
 
@@ -225,14 +235,18 @@ function validationRegister () {
 
 
 function register() {
-    rgt.classList.add('is')
-    lg.classList.add('is')
-    console.log('add')
-    bt.classList.add('register')
+    // rgt.classList.add('is')
+    // lg.classList.add('is')
+    btR.style.background = "linear-gradient(to right, yellow, red)";
+    btL.style.background = "transparent"
+    console.log('regisre');
+    
 }
 function login() {
-    rgt.classList.remove('is')
-    lg.classList.remove('is')
-    bt.classList.remove('register')
-    console.log('hoehwo')
+    // rgt.classList.remove('is')
+    // lg.classList.remove('is')
+    // bt.classList.remove('register')
+    btL.style.background = "linear-gradient(to right, yellow, red)";
+    btR.style.background = "transparent"
+    console.log('login');
 }
