@@ -51,12 +51,14 @@ function style_error (x) {
 const showTitle = (title,ishow) => {
     if(ishow)
     {
-        title.style.transform = "translate(-320px,15px)"
+        title.style.left = "5%"
+        title.style.top = "25%"
         title.style.transition = ".5s"
         title.style.color = "#45f3ff"
     }
     else {
-        title.style.transform = "translate(-320px,39px)"
+        title.style.left = "12%"
+        title.style.top = "41%"
         title.style.transition = ".5s"    
         title.style.color = "transparent"
     }
@@ -95,6 +97,12 @@ const loginse = () => {
       var errorCode = error.code;
       var errorMessage = error.message;
       console.log(errorCode)
+      switch(errorCode)
+      {
+        case "auth/network-request-failed":
+            alert("kiem tra lai internet");
+            break;
+      }
     });
 }
 function validationLogin () {
