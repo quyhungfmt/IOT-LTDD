@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav{
+    background-color: black;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 60px;
+    top: 0px;
+    position: fixed;
+    border: none;
+    padding-left: 10px;
+}
+nav:hover {
+    background-color: rgb(33, 33, 33);
+}
+nav:hover header h2{
+    box-shadow: 0px 0px 30px 10px blue;
+    background-color: white;
+    border-radius: 5px;
+}
+nav header h2 {
+    color: #45f3ff;
+    font-weight: 900;
+    box-shadow: 0px 0px 70px 10px blue;
+    border: none;
+    background-color: black;
+    pointer-events: none;
+    width: 160px;
+}
+nav ul {
+    width: 45%;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+nav ul li {
+    list-style: none;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+nav ul i  {
+    color: #fff;
+}
+nav ul li:hover i {
+    color:black;
+}
+nav ul li:hover {
+    box-shadow: 0 0 60px blue;
+    background-color: white;
+    border: 2px solid black;
+}
+nav ul input {
+    height: 30px;
+    width: 70%;
+    position: relative;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+}
+nav .box-user {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left:20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.box-user .userIn4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    color: #45f3ff;
+    padding-right: 10px;
+    background: linear-gradient(to left,white, white,black);
+    /* box-shadow: 0 0 60px white; */
+    margin-left: 10px;
+}
+.box-user .menu-item p{
+    margin: 0 10px 0 10px;
+    padding: 5px;
+    color: white;
+}
+.box-user img {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px 0 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+nav .menu {
+    height: 30px;
+    width: 30px;
+    color:white;
+    display: none;
+}
+.box-user hr {
+    display: none;
+}
+.box-user .menu-item span {
+    display:none;
+}
+.box-user .menu-item b {
+    display:none;
+}
+.menu-item {
+    text-decoration: none;
+}
+.menu-item:hover {
+    box-shadow: 0px 0px 30px 10px blue;
+    background-color: white;
+    border-radius: 5px;
+}
+.menu-item:hover p {
+    color: black;
+}

@@ -15,6 +15,7 @@ const firebaseApp = firebase.initializeApp({
     console.log("none")
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
+          console.log("have user")
           // User is signed in, see docs for a list of available properties
           window.location.href = "./src/Screen/Home/home.html"
           // ...

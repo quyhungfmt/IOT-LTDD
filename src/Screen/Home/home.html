@@ -3,20 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-    <script defer src="index.js" ></script>
     <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-auth-compat.js"></script>
+    <script src="https://kit.fontawesome.com/4ef6e2ca34.js" crossorigin="anonymous"></script>
+    <title>HOME</title>
+    <script defer src="index.js" ></script>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./reponsive.css">
+    <script type="module" src="../../FireBase/firebase.js" ></script>
+
 </head>
 <body>
-    <h1>HOME</h1>
-    <h1>TEST</h1>
-    <h1>TEST</h1>
-    <h1>TEST</h1>
-    <h1>TEST</h1>
-    <h1>TEST</h1>
-    <h1>TEST</h1>
-    <button onclick="logout()" >logout</button>
-</body>
-</html>
+        <!-- <button onclick="logout()" >logout</button> -->
+        <nav>
+            <p onclick="menu()" class="menu"><i class="fa-solid fa-bars fa-xl"></i></p>
+            <header>
+                <h2>IOT WEB APP</h2>
+            </header>
+            <ul>
+                <input type="text" placeholder="module name">
+                <li><i onclick="console.log('serkc')" class="fa-solid fa-magnifying-glass fa-xl"></i></li>
+                <li><i class="fa-solid fa-plus fa-xl"></i></li>
+            </ul>
+            
+            <div id="boxmenu" class="box-user">
+                <div class="userIn4">
+                    <img src="..//..//Assets/iconuser.png" alt="">
+                    <div class="userEmail">
+                    <h3>Admin</h3>
+                    <h4>admin@gmail.com</h4>
+                    </div>
+                </div>
+                <hr>
+                <a id="logout" href="../../../index.html" class="menu-item">
+                    <b><i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i></b>
+                    <p>LogOut</p>
+                </a>
+                <a id="account" href="" class="menu-item">
+                    <b><i class="fa-solid fa-user fa-xl"></i></b>
+                   <p>Account</p>
+                </a>
+                <a id="data" href="" class="menu-item">
+                    <b><i class="fa-solid fa-database fa-xl"></i></b>
+                   <p>Data</p>
+                </a>
+        </div>
+            </div>
+        </nav>
+        <ul style="margin-top: 60px;">
+            <li><button>ON/OFF</button><span>value</span> </li>
+            <li><button>ON/OFF</button><span>value</span> </li>
+            <li><button>ON/OFF</button><span>value</span> </li>
+            <li><button>ON/OFF</button><span>value</span> </li>
+        </ul>
+        <ul style="margin-top: 60px;">
+            <li><button>ON/OFF</button><span>value</span> </li>
+            <li><button>ON/OFF</button><span>value</span> </li>
+            <li><button>ON/OFF</button><span>value</span> </li>
+            <li><button>ON/OFF</button><span>value</span> </li>
+        </ul>
+        <ul style="margin-top: 60px;">
+            <li><button>ON/OFF</button><span>value</span> </li>
+            <li><button>ON/OFF</button><span>value</span> </li>
+            <li><button>ON/OFF</button><span>value</span> </li>
+            <li><button>ON/OFF</button><span>value</span> </li>
+        </ul>
+        
+    </body>
+    </html>
