@@ -1,15 +1,19 @@
-openmenu = document.getElementById("boxmenu");
 
-function menu () {
+
+var openmenu = document.getElementById("boxmenu");
+
+
+document.getElementById('menu').addEventListener('click', () => {
   openmenu.classList.toggle("openmenu");
-}
+}) 
 
-function logout() {
+
+document.getElementById("logout").addEventListener('click', () => {
+  alert("nso")
   firebase.auth().signOut().then(() => {
-    console.log("out");
-    window.location.href = "../Login/login.html"
+    window.location.href = "../../../index.html"
   }).catch((error) => {
     console.log(error.message)
   });
-}
+})
 

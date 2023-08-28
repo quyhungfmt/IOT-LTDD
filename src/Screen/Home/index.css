@@ -101,7 +101,8 @@ nav .box-user {
     border-radius: 50%;
     border: 1px solid black;
 }
-nav .menu {
+nav 
+#menu {
     height: 30px;
     width: 30px;
     color:white;

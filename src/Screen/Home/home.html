@@ -3,21 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-auth-compat.js"></script>
-    <script src="https://kit.fontawesome.com/4ef6e2ca34.js" crossorigin="anonymous"></script>
-    <title>HOME</title>
-    <script defer src="index.js" ></script>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./reponsive.css">
-    <script type="module" src="../../FireBase/firebase.js" ></script>
-
+    <title>HOME</title>
+    
 </head>
 <body>
         <!-- <button onclick="logout()" >logout</button> -->
         <nav>
-            <p onclick="menu()" class="menu"><i class="fa-solid fa-bars fa-xl"></i></p>
+            <p id="menu" ><i class="fa-solid fa-bars fa-xl"></i></p>
             <header>
                 <h2>IOT WEB APP</h2>
             </header>
@@ -36,13 +30,13 @@
                     </div>
                 </div>
                 <hr>
-                <a id="logout" onclick="logout()" href="" class="menu-item">
+                <a id="logout" href="" class="menu-item">
                     <b><i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i></b>
                     <p>LogOut</p>
                 </a>
                 <a id="account" href="" class="menu-item">
                     <b><i class="fa-solid fa-user fa-xl"></i></b>
-                   <p>Account</p>
+                    <p>Account</p>
                 </a>
                 <a id="data" href="" class="menu-item">
                     <b><i class="fa-solid fa-database fa-xl"></i></b>
@@ -52,8 +46,8 @@
             </div>
         </nav>
         <ul style="margin-top: 60px;">
-            <li><button>ON/OFF</button><span>value</span> </li>
-            <li><button>ON/OFF</button><span>value</span> </li>
+            <li><button id="btnvl1">ON/OFF</button><span id="value1">value</span> </li>
+            <li><button id="btnvl2">ON/OFF</button><span id="value2">value</span> </li>
             <li><button>ON/OFF</button><span>value</span> </li>
             <li><button>ON/OFF</button><span>value</span> </li>
         </ul>
@@ -71,4 +65,11 @@
         </ul>
         
     </body>
+    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-database-compat.js"></script>
+    <script src="https://kit.fontawesome.com/4ef6e2ca34.js" crossorigin="anonymous"></script>
+    <script type="module" src="index.js" ></script>
+    <script type="module" src="../../FireBase/firebase.js" ></script>
     </html>

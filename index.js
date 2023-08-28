@@ -12,15 +12,25 @@ const firebaseApp = firebase.initializeApp({
   const auth = firebaseApp.auth();
 
  const onAuth = () => {
-    console.log("none")
-    firebase.auth().onAuthStateChanged((user) => {
-        if (user) {
-          console.log("have user")
-          // User is signed in, see docs for a list of available properties
-          window.location.href = "./src/Screen/Home/home.html"
-          // ...
-        } else {
-          window.location.href = "./src/Screen/Login/login.html"
-        }
-      });
+
+  const user = firebase.auth().currentUser;
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/v8/firebase.User
+    // ...
+    window.location.href = "./src/Screen/Home/home.html"
+  } else {
+    // No user is signed in.
+    window.location.href = "./src/Screen/Login/login.html"
+  }
+    // firebase.auth().onAuthStateChanged((user) => {
+    //     if (user) {
+    //       console.log("have user")
+    //       // User is signed in, see docs for a list of available properties
+    //       window.location.href = "./src/Screen/Home/home.html"
+    //       // ...
+    //     } else {
+    //       window.location.href = "./src/Screen/Login/login.html"
+    //     }
+    //   });
  }

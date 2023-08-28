@@ -82,7 +82,7 @@
     .box-user .userIn4 {
         background:transparent;
     }
-    nav .menu {
+    nav #menu {
         display: flex;
         margin-right: 5px;
         border: 1px solid white;
