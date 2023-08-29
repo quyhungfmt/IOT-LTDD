@@ -61,11 +61,11 @@
         top:60px;
         border:2px solid white;
         overflow:hidden;
-        max-width:200px;
+        max-width:0px;
         transition: max-width .5s;
     }
     nav .box-user.openmenu {
-        max-width: 0px;
+        max-width: 200px;
     }
     .box-user .userIn4 {
         position:absolute;

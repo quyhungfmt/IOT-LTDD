@@ -31,7 +31,7 @@ nav header h2 {
     pointer-events: none;
     width: 160px;
 }
-nav ul {
+nav form {
     width: 45%;
     height: 40px;
     margin-left: 20px;
@@ -40,7 +40,7 @@ nav ul {
     align-items: center;
     position: relative;
 }
-nav ul li {
+nav form button {
     list-style: none;
     height: 30px;
     width: 30px;
@@ -51,18 +51,18 @@ nav ul li {
     border: 2px solid white;
     border-radius: 10px;
 }
-nav ul i  {
+nav form button  {
     color: #fff;
 }
-nav ul li:hover i {
+nav form button:hover i {
     color:black;
 }
-nav ul li:hover {
+nav form button:hover {
     box-shadow: 0 0 60px blue;
     background-color: white;
     border: 2px solid black;
 }
-nav ul input {
+nav form input {
     height: 30px;
     width: 70%;
     position: relative;
@@ -101,7 +101,6 @@ nav .box-user {
     border-radius: 50%;
     border: 1px solid black;
 }
-nav 
 #menu {
     height: 30px;
     width: 30px;
@@ -127,4 +126,53 @@ nav
 }
 .menu-item:hover p {
     color: black;
+}
+.body {
+    margin-top: 60px;
+    position: relative;
+    display: flex;
+    flex-flow: wrap-reverse;
+    justify-content: center;
+}
+.body ul {
+    list-style: none;
+}
+.body .bodyvalue .list {
+    background-color: #45f3ff;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 100px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.bodyvalue .list header {
+    position: absolute;
+    top: 5px;
+    font-size: 22px;
+    font-weight: 900;
+    color: white;
+}
+.switch-body {
+    height: 30px;
+    width: 70px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 3px;
+    margin-top: 10px;
+}
+.switch-body .switch-value {
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0 0 20px black;
+    transition: transform .5s;
+}
+.switch-body .switch-value.on {
+    transform: translateX(40px);
 }

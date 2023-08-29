@@ -15,15 +15,15 @@
             <header>
                 <h2>IOT WEB APP</h2>
             </header>
-            <ul>
-                <input type="text" placeholder="module name">
-                <li><i onclick="console.log('serkc')" class="fa-solid fa-magnifying-glass fa-xl"></i></li>
-                <li><i class="fa-solid fa-plus fa-xl"></i></li>
-            </ul>
+            <form id="add">
+                <input class="inputModule" type="text" placeholder="module name">
+                <button>asd</button>
+                <button type="submit">asdfsadf</button>
+            </form>
             
             <div id="boxmenu" class="box-user">
                 <div class="userIn4">
-                    <img src="..//..//Assets/iconuser.png" alt="">
+                    <img src="" alt="">
                     <div class="userEmail">
                     <h3>Admin</h3>
                     <h4>admin@gmail.com</h4>
@@ -42,34 +42,25 @@
                     <b><i class="fa-solid fa-database fa-xl"></i></b>
                    <p>Data</p>
                 </a>
-        </div>
             </div>
-        </nav>
-        <ul style="margin-top: 60px;">
-            <li><button id="btnvl1">ON/OFF</button><span id="value1">value</span> </li>
-            <li><button id="btnvl2">ON/OFF</button><span id="value2">value</span> </li>
-            <li><button>ON/OFF</button><span>value</span> </li>
-            <li><button>ON/OFF</button><span>value</span> </li>
-        </ul>
-        <ul style="margin-top: 60px;">
-            <li><button>ON/OFF</button><span>value</span> </li>
-            <li><button>ON/OFF</button><span>value</span> </li>
-            <li><button>ON/OFF</button><span>value</span> </li>
-            <li><button>ON/OFF</button><span>value</span> </li>
-        </ul>
-        <ul style="margin-top: 60px;">
-            <li><button>ON/OFF</button><span>value</span> </li>
-            <li><button>ON/OFF</button><span>value</span> </li>
-            <li><button>ON/OFF</button><span>value</span> </li>
-            <li><button>ON/OFF</button><span>value</span> </li>
-        </ul>
-        
+        </nav>        
+          <div class="body">
+            <ul class="bodyvalue">
+                <!-- list input module -->
+                <div class="switch-body">
+                    <div class="switch-value on">
+                        
+                    </div>
+                </div>
+            </ul>
+          </div>  
+            
+
     </body>
     <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-database-compat.js"></script>
-    <script src="https://kit.fontawesome.com/4ef6e2ca34.js" crossorigin="anonymous"></script>
     <script type="module" src="index.js" ></script>
     <script type="module" src="../../FireBase/firebase.js" ></script>
     </html>

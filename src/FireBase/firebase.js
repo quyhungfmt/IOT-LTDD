@@ -14,24 +14,25 @@ const firebaseApp = firebase.initializeApp({
   
   
 
-  var loact = firebase.database().ref('IOT/01/data1');
-  loact.on('value', (snapshot) => {
-    const data1 = snapshot.val();
-    document.getElementById('value1').innerHTML = data1
-  });
-  var loact2 = firebase.database().ref('IOT/01/data2');
-  loact2.on('value', (snapshot) => {
-    const data2 = snapshot.val();
-    document.getElementById('value2').innerHTML = data2
-  });
-  
-  document.getElementById("btnvl1").addEventListener('click', () => {
-    writeUserData();
-  })
+  // var loact = firebase.database().ref('IOT/01/data1');
+  // loact.on('value', (snapshot) => {
+  //   const data1 = snapshot.val();
+  //   document.getElementById('value1').innerHTML = data1
+  // });
+  // var loact2 = firebase.database().ref('IOT/01/data2');
+  // loact2.on('value', (snapshot) => {
+  //   const data2 = snapshot.val();
+  //   document.getElementById('value2').innerHTML = data2
 
-  function writeUserData() {
-    firebase.database().ref('IOT/01' ).set({
-      data1: "0",
-      data2: "1",
-    });
-  }
+  // });
+  
+  // document.getElementById("btnvl1").addEventListener('click', () => {
+  //   writeUserData();
+  // })
+
+  // function writeUserData() {
+  //   firebase.database().ref('IOT/01' ).set({
+  //     data1: "0",
+  //     data2: "1",
+  //   });
+  // }
