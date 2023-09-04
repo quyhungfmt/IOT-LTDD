@@ -10,14 +10,12 @@ const firebaseApp = firebase.initializeApp({
   });
   const db = firebaseApp.firestore();
   const auth = firebaseApp.auth();
-  const database = firebase.database();
-  
+  // const database = firebase.database();
   
 
   // var loact = firebase.database().ref('IOT/01/data1');
   // loact.on('value', (snapshot) => {
   //   const data1 = snapshot.val();
-  //   document.getElementById('value1').innerHTML = data1
   // });
   // var loact2 = firebase.database().ref('IOT/01/data2');
   // loact2.on('value', (snapshot) => {

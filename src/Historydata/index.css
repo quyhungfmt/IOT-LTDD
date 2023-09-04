@@ -1,0 +1,265 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+}
+:root {
+    --blue45 : #45f3ff;
+    --valLowColor: red;
+    --borderEtvalue : #fff #fff var(--valLowColor) var(--valLowColor);
+    --colorKt : black;
+    --rotateafter : rotate(-40deg);
+    --textvaluecolor: #0019a7;
+    --vcolor:#fff;
+    --afterboxcolor: white white #ff6f16 #ff6f16;
+}
+.header {
+    background-color: red;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 10px;
+    color: aqua;
+    font-size: 20px;
+    font-weight: 700;
+    top: 0;
+}
+.header header{
+    animation: hearder-auto 2s infinite alternate;
+    transform: scale(0.8);
+}
+@keyframes hearder-auto {
+   to {
+    transform: scale(1);
+   }
+}
+.bodydata {
+    background-color: #c2bdc2;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    padding: 15px;
+}
+
+/*  */
+.bodydata .boxModule {
+    width: 20%;
+    height: 450px;
+    background-color: rgba(51, 67, 67,0.5);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+
+}
+.boxModule .search{
+    border-radius: 4px;
+    display: flex;
+    margin-left: 2px;
+    height: 5%;
+
+}
+.search input {
+    width: 80%;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+    box-shadow: 0 0 20px black;
+}
+.search input:hover {
+    border: 2px solid #fff;
+    box-shadow: 10px 0px 20px #fff;
+}
+.search input::placeholder {
+    color: #fff;
+    font-weight: 700;
+}
+.search button {
+    margin-left: 10px;
+}
+
+.boxModule .List-module {
+    overflow-y: scroll;
+    height: 95%;
+}
+.bodydata .List-module ul{
+    list-style: none;
+    width: 100%;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+}
+.List-module ul li {
+    height: 40px;
+    border-top: 2px solid black;
+    border-radius: 5px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  */
+
+.charts {
+    width: 75%;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.charts .boxvalue {
+    height: 50%;
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+#bodybox {
+    display: flex;width: 100%;justify-content: space-evenly;
+}
+.namesensordata{
+    position: absolute;
+    top:0px;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 25px;
+}
+.namesensordata p {
+    border-radius: 10px;
+    width: 240px;
+    text-align: center;
+}
+.namesensordata p:nth-child(1){
+    color: blue;
+}
+.charts .boxvalue .value {
+    position: relative;
+    height:120px;
+    width:240px;
+    margin:10px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.charts .boxvalue .value::after {
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    position: absolute;
+    content: '';
+    border: 20px solid transparent;
+    border-radius: 50%;
+    top: 20px;
+    box-sizing: border-box;
+    border-color: var(--afterboxcolor);
+    transform: var(--rotateafter);
+    transition: transform 1s;
+    box-shadow:-6px 0px 10px 0px rgb(252, 252, 252),
+    inset -6px 6px 10px 0px rgba(0, 0, 0, 0.6),
+    6px 0px 10px 0px rgba(51, 67, 67,0.5),
+    inset -6px 0 10px 0px rgba(255, 255, 112,0.6);
+} 
+
+.value .etvalue {
+    position: absolute;
+    height: 160px;
+    width: 160px;
+    top: 40px;
+    transform: var(--rotateafter);
+    border-radius: 50%;
+    border: 50px solid red;
+    box-sizing: border-box;
+    border-color: var(--borderEtvalue);
+    transition: transform 1s;
+    background-color: yellow
+}
+.value .etvalue .kt {
+    height: 160px;
+    width: 2px;
+    background-color: var(--colorKt);
+    transform:rotate(-45deg) ;
+    position: absolute;
+    top: -49.5px;
+    left: 29.5px;
+}
+.value span{
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(0, 213, 255);
+    box-shadow:4px -2px 16px black, inset 5px 3px 9px 0px #fff;
+    border-top-left-radius: 29px;
+    border-top-right-radius: 29px;
+}
+.value span p{
+    font-size: 20px;
+    color: var(--textvaluecolor);
+    font-weight: 900;
+    text-align: center;
+}
+.value .line {
+    height: 230px;
+    color:#fff;
+    position: absolute;
+    bottom: -115px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.value .line:nth-child(1){transform: rotate(-85deg);}
+.value .line:nth-child(2){transform: rotate(-68deg);}
+.value .line:nth-child(3){transform: rotate(-51deg);}
+.value .line:nth-child(4){transform: rotate(-36deg);}
+.value .line:nth-child(5){transform: rotate(-19deg);}
+.value .line:nth-child(6){transform: rotate(-2deg);}
+.value .line:nth-child(7){transform: rotate(15deg);}
+.value .line:nth-child(8){transform: rotate(32deg);}
+.value .line:nth-child(9){transform: rotate(49deg);}
+.value .line:nth-child(10){transform: rotate(66deg);}
+.value .line:nth-child(11){transform: rotate(85deg);}
+.value .line.inval:nth-child(1) {color:#005d22;}
+.value .line.inval:nth-child(2) {color:#005d22;}
+.value .line.inval:nth-child(3) {color:#005d22;}
+.value .line.inval:nth-child(4) {color:#ffcd42;}
+.value .line.inval:nth-child(5) {color:#ffcd42;}
+.value .line.inval:nth-child(6) {color:#ff8e42;}
+.value .line.inval:nth-child(7) {color:#ff6f0f;}
+.value .line.inval:nth-child(8) {color:#ff4b0f;}
+.value .line.inval:nth-child(9) {color:#ff1b0f;}
+.value .line.inval:nth-child(10) {color:#ff1b0f;}
+.value .line.inval:nth-child(11) {color:#ff1b0f;}
+.value .line .division {
+    background-color: black;
+    height: 220px;
+    width: 2px;
+}
+.value .line p {
+    font-size: 10px;
+    height: 10px;
+}
+
+
+.charts .chartsvalue {
+    height: 50%;
+    width: 100%;
+}

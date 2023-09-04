@@ -1,0 +1,22 @@
+@media only screen and  (max-width: 46.1875em){ 
+    .boxModule {
+        display: none;
+    }
+    .charts {
+        width: 100%;
+        padding: 0;
+    }
+    .value {
+        transform: scale(0.8);
+
+    }
+    .charts .boxvalue .value .v {
+        height: 200px;
+        top: 15px;
+        color: black;
+    }
+    .etvalue{
+        transform: scale(0.5);
+    }
+
+}

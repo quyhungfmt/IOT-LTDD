@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-database-compat.js"></script>
+    <title>Data</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./reponsive.css">
+    <script defer src="./index.js"></script>
+    <script type="module" src="../FireBase/firebase.js" ></script>
+</head>
+<body>
+    <div class="header">
+        <header>
+            HISTORY DATA
+        </header>
+        <button type="button" onclick="load()" >1</button>
+        <button type="button"onclick="showdata(150);" >2</button>
+    </div>
+    <div class="bodydata">
+        <div class="boxModule">
+            <form class="search">
+                <input type="text" placeholder="search">
+                <button type="submit">search</button>
+            </form>
+            <div id="bodylist" class="List-module">
+                <!-- list module show -->
+            </div>
+        </div>
+        <div class="charts">
+            <div  class="boxvalue">
+                  <div id="bodybox">
+                   <!-- body box -->
+                  
+                  </div>
+            </div>
+            <div class="chartsvalue">
+                <span id="show"></span>
+
+            </div> 
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+<!-- 
+       <div class="namesensordata">
+        <p>${value}</p>   
+        <p>Tempera</p>   
+    </div>
+    <div  id="sensor1" class="value">
+        <div class="v">0 <div class="vv">  
+        </div></div>
+        <div class="v">10<div class="vv">  
+        </div></div>
+        <div class="v">20<div class="vv">  
+        </div></div>
+        <div class="v">30<div class="vv">  
+        </div></div>
+        <div class="v">40<div class="vv">  
+        </div></div>
+        <div class="v">50<div class="vv">  
+        </div></div>
+        <div class="v">60<div class="vv">  
+        </div></div>
+        <div class="v">70<div class="vv">  
+        </div></div>
+        <div class="v">80<div class="vv">  
+        </div></div>
+        <div class="v">90<div class="vv">  
+        </div></div>
+        <div class="v">100<div class="vv">  
+        </div></div>
+        <div id="sensor1Etcolor" class="etvalue">
+        <div class="kt"></div>
+        </div>
+        <span><p id="sensor1Val" class="sensor1">0</p></span>
+    </div>
+    <div id="sensor2" class="value">
+        <div class="v">0 <div class="vv">  
+        </div></div>
+        <div class="v">10<div class="vv">  
+        </div></div>
+        <div class="v">20<div class="vv">  
+        </div></div>
+        <div class="v">30<div class="vv">  
+        </div></div>
+        <div class="v">40<div class="vv">  
+        </div></div>
+        <div class="v">50<div class="vv">  
+        </div></div>
+        <div class="v">60<div class="vv">  
+        </div></div>
+        <div class="v">70<div class="vv">  
+        </div></div>
+        <div class="v">80<div class="vv">  
+        </div></div>
+        <div class="v">90<div class="vv">  
+        </div></div>
+        <div class="v">100<div class="vv">  
+        </div></div>
+        <div id="sensor2Etcolor" class="etvalue">
+        <div class="kt"></div>
+        </div>
+        <span><p id="sensor2Val" class="sensor2">0</p></span>
+    </div>
+
+
+
+ -->

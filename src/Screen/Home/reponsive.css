@@ -2,7 +2,8 @@
 
 }
 
-@media only screen and (max-width: 46.1875em) {
+/* mobile */
+@media only screen and (max-width: 42.1875em) {
     nav ul {
         width:70%;
     }
@@ -90,10 +91,79 @@
         justify-content: center;
         align-items: center;
     }
+    .bodylist{
+        padding: unset;
+        left: unset;
+    }
+    .bodylist .bodyvalue{
+        width: 100%;
+        padding: unset;
+        margin-left: unset;
+    }
+    .bodylist .controler{
+        width: 40%;
+        display: flex;
+        align-items:safe;
+    }
+    .controler .title{
+        margin-top: 40px;
+    }
+    .showvalue {
+        display: unset;
+        width: 60%;
+        height:240px;
+    }
+    .showvalue .value::after {
+        height: 70px;
+        width: 70px;
+        border: 10px solid beige;
+        border-radius: 50%;
+        top: 65px;
+        border-color: #fff #fff red red;
+    }
+    .value .etvalue {
+        height: 30px;
+        width: 30px;
+        border: 20px solid yellow;
+        bottom: -35px;
+        border-color: #fff #fff yellow yellow;
+    }
+    .showvalue .value .etvalue .kt {
+        height:95px;
+        top: -32px;
+        left: 14px;
+    }
+    .showvalue .value .line {
+        font-size: 8px;
+        height: 120px;
+        top:49px;
+    }
+    .line .division {
+        height: 2px;
+        width: 1px;
+    }
+    .value span {
+        background-color: #45f3ff;
+        width: 10px;
+        height: 20px;
+    }
+    .showvalue .namesensordata {
+        flex-direction: column;
+        align-items: center;
+        height: 60%;
+        justify-content: space-between;;
+    }
 }
 @media only screen and (min-width: 46.12em) and (max-width: 63.9375em) {
     /* .menu-item{
         display:none;
     } */
+    .showvalue {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .showvalue .namesensordata {
+    }
     
 }

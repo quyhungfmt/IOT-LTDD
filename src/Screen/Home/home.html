@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./reponsive.css">
+    <script defer src="index.js" ></script>
+    <script defer src="firebaseFT.js" ></script>
+    <script type="module" src="../../FireBase/firebase.js" ></script>
     <title>HOME</title>
     
 </head>
-<body>
+<body onload="updata()">
         <!-- <button onclick="logout()" >logout</button> -->
         <nav>
             <p id="menu" ><i class="fa-solid fa-bars fa-xl"></i></p>
@@ -17,8 +20,9 @@
             </header>
             <form id="add">
                 <input class="inputModule" type="text" placeholder="module name">
-                <button>asd</button>
-                <button type="submit">asdfsadf</button>
+                <button type="button" onclick="showdata(26,'sensor2')">search</button>
+                <button type="submit" >addModule</button>
+                <button type="button" id="button2">adddata</button>
             </form>
             
             <div id="boxmenu" class="box-user">
@@ -30,7 +34,7 @@
                     </div>
                 </div>
                 <hr>
-                <a id="logout" href="" class="menu-item">
+                <a id="logout" class="menu-item">
                     <b><i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i></b>
                     <p>LogOut</p>
                 </a>
@@ -38,29 +42,19 @@
                     <b><i class="fa-solid fa-user fa-xl"></i></b>
                     <p>Account</p>
                 </a>
-                <a id="data" href="" class="menu-item">
+                <a id="data" href="../../Historydata/showdata.html" class="menu-item">
                     <b><i class="fa-solid fa-database fa-xl"></i></b>
                    <p>Data</p>
                 </a>
             </div>
-        </nav>        
-          <div class="body">
-            <ul class="bodyvalue">
-                <!-- list input module -->
-                <div class="switch-body">
-                    <div class="switch-value on">
-                        
-                    </div>
-                </div>
-            </ul>
-          </div>  
-            
-
+        </nav>
+        <div id="listbody" class="bodylist">
+            <!--  -->
+        </div>
+        
     </body>
     <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-database-compat.js"></script>
-    <script type="module" src="index.js" ></script>
-    <script type="module" src="../../FireBase/firebase.js" ></script>
     </html>
