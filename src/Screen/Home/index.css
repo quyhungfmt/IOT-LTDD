@@ -58,17 +58,15 @@ nav form {
 }
 nav form button {
     list-style: none;
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 10px;
-    border: 2px solid white;
+    border: 2px solid blue;
     border-radius: 10px;
-}
-nav form button  {
-    color: #fff;
+    font-weight: 800;
 }
 nav form button:hover i {
     color:black;
@@ -90,58 +88,64 @@ nav form input {
 nav .box-user {
     display: flex;
     flex-direction: row-reverse;
-    margin-left:20px;
-    justify-content: space-evenly;
     align-items: center;
+    width: 150px;
+    justify-content: space-between;
 }
-.box-user .userIn4 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.box-user .menu-title{
+    position: relative;
+    padding: 10px;
     border-radius: 10px;
-    color: #45f3ff;
-    padding-right: 10px;
-    background: linear-gradient(to left,white, white,black);
-    /* box-shadow: 0 0 60px white; */
-    margin-left: 10px;
-}
-.box-user .menu-item p{
-    margin: 0 10px 0 10px;
-    padding: 5px;
-    color: white;
-}
-.box-user img {
     width: 50px;
-    height: 50px;
-    margin: 0 10px 0 15px;
-    border-radius: 50%;
-    border: 1px solid black;
-}
-#menu {
-    height: 30px;
-    width: 30px;
-    color:white;
-    display: none;
-}
-.box-user hr {
-    display: none;
-}
-.box-user .menu-item span {
-    display:none;
-}
-.box-user .menu-item b {
-    display:none;
-}
-.menu-item {
-    text-decoration: none;
+    text-align: center; 
     cursor: pointer;
 }
-.menu-item:hover {
-    box-shadow: 0px 0px 30px 10px blue;
-    background-color: white;
-    border-radius: 5px;
+.box-user .menu-title a {
+    text-decoration:  none;
+    font-size: 15px ;
+    color: white;
 }
-.menu-item:hover p {
+.box-user li:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 50px blue;
+}
+.box-user li:hover a {
+    color: black;
+}
+.box-user li .menu-item{
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 60px;
+    left:0px;
+    top: 45px;
+    background-color: white;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .5s
+}
+.box-user li ul li {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-user li:hover .menu-item {
+    max-height: 60px;
+}
+
+
+#menu {
+    width: 50px;
+    height: 30px;
+    color:white;
+    display: none;
+    background-color: black;
+}
+#menu:hover {
+    background-color: white;
     color: black;
 }
 ul {
@@ -175,6 +179,11 @@ ul {
 .bodylist .bodyvalue header {
     padding-bottom: 5px;
     font-weight: 700;
+    display: flex;
+    justify-content: space-evenly;
+}
+.bodyvalue header p {
+    color: #ff6f0f;
 }
 .bodylist .valueControlAndShow {
     display: flex;
@@ -241,6 +250,7 @@ ul {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    font-weight: 800;
 }
 .showvalue .namesensordata p:nth-child(1) {color:violet}
 .showvalue .namesensordata p:nth-child(2) {color:royalblue}
@@ -286,14 +296,15 @@ ul {
 .value span {
     z-index: 2;
     position: absolute;
-    bottom: -10px;
+    bottom: -5px;
     background-color: #45f3ff;
     width: 20px;
     height: 20px;
-    font-size: 10px;
+    font-size: 15px;
     border-radius: 50%; 
     text-align: center;
     justify-content: center;
+    font-weight: 600;
 }
 .value .line:nth-child(1){transform: rotate(-85deg);}
 .value .line:nth-child(2){transform: rotate(-68deg);}
@@ -306,11 +317,11 @@ ul {
 .value .line:nth-child(9){transform: rotate(49deg);}
 .value .line:nth-child(10){transform: rotate(66deg);}
 .value .line:nth-child(11){transform: rotate(84deg);}
-.value .line.inval:nth-child(1) {color:#024300;}
-.value .line.inval:nth-child(2) {color:#005d22;}
-.value .line.inval:nth-child(3) {color:#005d22;}
-.value .line.inval:nth-child(4) {color:#ffcd42;}
-.value .line.inval:nth-child(5) {color:#ffcd42;}
+.value .line.inval:nth-child(1) {color:#279923;}
+.value .line.inval:nth-child(2) {color:#279923;}
+.value .line.inval:nth-child(3) {color:#2eee75;}
+.value .line.inval:nth-child(4) {color:#bd9629;}
+.value .line.inval:nth-child(5) {color:#bd9629;}
 .value .line.inval:nth-child(6) {color:#ff8e42;}
 .value .line.inval:nth-child(7) {color:#ff6f0f;}
 .value .line.inval:nth-child(8) {color:#ff4b0f;}

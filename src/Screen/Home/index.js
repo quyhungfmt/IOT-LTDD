@@ -81,10 +81,8 @@ function UpdateListModule (listModule = []) {
     <ul>
         <li>
             <header>
-                ${value.name}
+                <p id="ModuleName${value.name}" >ModuleName: ${value.name}</p>
                 <button onclick = "deleteModule('${address}')">XÓA</button>
-                <button onclick = "showdata(50,'Humidity','${address}')">show1</button>
-                <button onclick = "showdata(88,'Temperature','${address}')">show2</button>
             </header>
         <li></ul>
             <!--value controler -->
@@ -159,6 +157,7 @@ function UpdateListModule (listModule = []) {
   })
   body += '<ul>'
   document.querySelector('#listbody').innerHTML=body
+
 }
 function updata () {
   let dataLocal = getLocalModuleName();
@@ -197,7 +196,6 @@ function showdata (value,sensorName,moduleName) {
       document.getElementById(moduleName+sensorName+"-"+i).setAttribute("class","line inval")
       cshow.style.setProperty('--rotateafter','rotate(130deg)')
       valueshow.innerHTML ="1xx"
+      valueshow.style.color = "red"
   }
 }
-
-

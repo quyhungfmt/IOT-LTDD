@@ -14,39 +14,39 @@
 <body onload="updata()">
         <!-- <button onclick="logout()" >logout</button> -->
         <nav>
-            <p id="menu" ><i class="fa-solid fa-bars fa-xl"></i></p>
+            <button id="menu">MENU</button>
             <header>
                 <h2>IOT WEB APP</h2>
             </header>
             <form id="add">
                 <input class="inputModule" type="text" placeholder="module name">
-                <button type="button" onclick="showdata(26,'sensor2')">search</button>
-                <button type="submit" >addModule</button>
-                <button type="button" id="button2">adddata</button>
+                <button type="submit" >ADD</button>
             </form>
             
-            <div id="boxmenu" class="box-user">
-                <div class="userIn4">
-                    <img src="" alt="">
-                    <div class="userEmail">
-                    <h3>Admin</h3>
-                    <h4>admin@gmail.com</h4>
-                    </div>
-                </div>
-                <hr>
-                <a id="logout" class="menu-item">
-                    <b><i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i></b>
-                    <p>LogOut</p>
-                </a>
-                <a id="account" href="" class="menu-item">
-                    <b><i class="fa-solid fa-user fa-xl"></i></b>
-                    <p>Account</p>
-                </a>
-                <a id="data" href="../../Historydata/showdata.html" class="menu-item">
-                    <b><i class="fa-solid fa-database fa-xl"></i></b>
-                   <p>Data</p>
-                </a>
-            </div>
+            <ul id="boxmenu" class="box-user">
+                <li class="menu-title">
+                    <a>
+                        Setting▾
+                    </a>
+                    <ul class="menu-item">   
+                        <li>
+                            <a href="" >
+                                Account
+                            </a>
+                        </li>
+                        <li>
+                            <a id="logout">
+                                LogOut
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-title">
+                    <a id="data" href="../../Historydata/showdata.html">
+                        Data
+                     </a>
+                </li>
+            </ul>
         </nav>
         <div id="listbody" class="bodylist">
             <!--  -->
