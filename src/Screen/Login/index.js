@@ -4,11 +4,14 @@ var error_email = document.getElementById("lineEmail")
 var error_pass = document.getElementById("linePass")
 var titleE = document.getElementById("titleE")
 var titleP = document.getElementById("titleP")
-
-history.pushState(null , null, location.href);
+window.history.pushState(null, "", window.location.href);        
 window.onpopstate = function() {
-    history.go(1);
-  }
+    window.history.pushState(null, "", window.location.href);
+};
+// history.pushState(null , null, location.href);
+// window.onpopstate = function() {
+//     history.go(1);
+//   }
 
 
 function style_error (x) {
@@ -83,14 +86,13 @@ function validatePass () {
     else if(passvalue.length >= 6) style_error(5);
 }
 const loginse = () => {
-    
     var passvalue = document.getElementById("inputPass").value;
     var emailvalue = document.getElementById("inputEmail").value;
     firebase.auth().signInWithEmailAndPassword(emailvalue, passvalue)
     .then((userCredential) => {
       // Signed in
       window.location.href = "../Home/home.html"
-      var user = userCredential.user;
+      localStorage.setItem('islogin','true');
       // ...
     })
     .catch((error) => {

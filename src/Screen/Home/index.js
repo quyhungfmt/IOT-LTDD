@@ -30,7 +30,6 @@ function addModule () {
   ModuleArray.push({name: input.value})
   localStorage.setItem('ModuleName', JSON.stringify(ModuleArray)) // JSON.stringify conver Array to String
   UpdateListModule(ModuleArray)
-  location.reload();
   input.value = ''
 }
 
@@ -54,6 +53,7 @@ add.addEventListener('submit',(e) => {
 })
 
 
+
 // ---------XOA MOT OBJECT TRONG MANG OBJECT CÓ OBJ.ID == INDEX---------------------->
 //------------DUNG DE XOA TEN MODULE--------------------------------------------->
 function deleteModule (name) {
@@ -71,11 +71,12 @@ function deleteModule (name) {
 function UpdateListModule (listModule = []) {
   let body = '<ul>'
   listModule.forEach((value) => {
+    
     let address = value.name;
-    listenData("L"+address,"tL"+address,value.name+"/DataLED","LED");
-    listenData("M"+address,"tM"+address,value.name+"/DataDC","Máy Bơm");
-    listenDataSensor(address,'Humidity');
-    listenDataSensor(address,'Temperature');
+    // listenData("L"+address,"tL"+address,value.name+"/DataLED","LED");
+    // listenData("M"+address,"tM"+address,value.name+"/DataDC","Máy Bơm");
+    // listenDataSensor(address,'Humidity');
+    // listenDataSensor(address,'Temperature');
     body += `
     <div class="bodyvalue">
     <ul>
@@ -83,6 +84,7 @@ function UpdateListModule (listModule = []) {
             <header>
                 <p id="ModuleName${value.name}" >ModuleName: ${value.name}</p>
                 <button onclick = "deleteModule('${address}')">XÓA</button>
+                <button onclick ="alert('${address}')">xem bieu do </button>
             </header>
         <li></ul>
             <!--value controler -->
@@ -152,7 +154,6 @@ function UpdateListModule (listModule = []) {
             </div>
             </div>    
             </div>    
-
     `
   })
   body += '<ul>'
@@ -199,3 +200,27 @@ function showdata (value,sensorName,moduleName) {
       valueshow.style.color = "red"
   }
 }
+
+function logout () {
+  localStorage.setItem('islogin','null');
+  window.location.href = "../../../index.html"
+  alert('sldf');
+  window.history.pushState(null, "", window.location.href);        
+window.onpopstate = function() {
+    window.history.pushState(null, "", window.location.href);
+};
+
+}
+const onAuth = () => {
+  if(!(localStorage.getItem('islogin') == 'true'))
+    window.location.href = "../../../errorpage.html"
+ }
+ window.addEventListener('load', function () {
+  const loader = document.getElementById('loader');
+  setTimeout(function() {
+      loader.style.opacity = "0";
+      setTimeout(function() {
+          loader.style.display = "none";
+      }, 1000);
+  }, 1000);
+});

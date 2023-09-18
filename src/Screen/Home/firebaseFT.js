@@ -17,17 +17,17 @@ function updateData (path,key,value) {
    firebase.database().ref(path).update(ob)
  }
 
-
  
 // -------------------------------SIGN OUT FIREBASE----------------------------->
 
-document.getElementById("logout").addEventListener('click', () => {
-   firebase.auth().signOut().then(() => {
-     window.location.href = "../../../index.html"
-   }).catch((error) => {
-     console.log(error.message)
-   });
- })
+// document.getElementById("logout").addEventListener('click', () => {
+//    firebase.auth().signOut().then(() => {
+//       alert("out")
+//      window.location.href = "../../../index.html"
+//    }).catch((error) => {
+//      console.log(error.message)
+//    });
+//  })
  
 
 

@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+section {
+    display: flex;
+    background-color: whitesmoke;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.boxbody {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    box-shadow: 0 0 20px gray;
+}
+.adminstt {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 400px;
+    padding: 4px;
+    border:1px solid black;
+    position: relative;
+    border-radius: 15px;
+}
+.adminstt::after {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    border: 10px dashed black;
+    box-sizing: border-box;
+    top : 0px;
+    z-index: 3;
+    left: 0;
+    animation: identifier 2s infinite cubic-bezier(1, 1, 1, 1);
+}
+@keyframes identifier {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.adminstt .addAccount {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    z-index: 3;
+    background-color: gray;
+    border-radius: 10px;
+}
+.addAccount input {
+    border: none;
+    margin: 5px 0 5px 0;
+    height: 25px;
+    width: 90%;
+    border-radius: 5px;
+}
+.addAccount p {
+    margin: 15px 0 2px 0;
+    width: 90%;
+    padding-left: 5px;
+    color: white;
+}
+.addAccount p:nth-child(1)
+{
+    font-size: 22px;text-align: center;
+    margin-top: 10px;
+}
+.list-account {
+    height: 400px;
+    width: 350px;
+    border: 1px solid black;
+    display: flex;
+    padding-top: 5px;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: inset 0 0 4px blue,
+    0 0 20px gray;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    height: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+}
+.list-account .account {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+.list-account .account ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}

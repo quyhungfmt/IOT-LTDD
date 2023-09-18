@@ -1,12 +1,11 @@
 const firebaseApp = firebase.initializeApp({
-    apiKey: "AIzaSyB-hS9CcEIy5304p_ZDqk5KPoYdrVnfbB4",
-    authDomain: "iot-ltdd.firebaseapp.com",
-    databaseURL: "https://iot-ltdd-default-rtdb.firebaseio.com",
-    projectId: "iot-ltdd",
-    storageBucket: "iot-ltdd.appspot.com",
-    messagingSenderId: "810346939081",
-    appId: "1:810346939081:web:6bad8f0b4c7c54739bc318",
-    measurementId: "G-XL4KWML35Q"    
+  apiKey: "AIzaSyDi7YuGqfj1AhBW44YiOLjhwZUr8IlFUsI",
+  authDomain: "iotnhom2.firebaseapp.com",
+  databaseURL: "https://iotnhom2-default-rtdb.firebaseio.com",
+  projectId: "iotnhom2",
+  storageBucket: "iotnhom2.appspot.com",
+  messagingSenderId: "692824710274",
+  appId: "1:692824710274:web:8c175981fd1e1effdd289b"
   });
   const db = firebaseApp.firestore();
   const auth = firebaseApp.auth();

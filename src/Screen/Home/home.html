@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="../../AdminST/index.css">
     <link rel="stylesheet" href="./reponsive.css">
     <script defer src="index.js" ></script>
+    <script defer src="../../AdminST/index.js" ></script>
     <script defer src="firebaseFT.js" ></script>
     <script type="module" src="../../FireBase/firebase.js" ></script>
     <title>HOME</title>
-    
 </head>
-<body onload="updata()">
-        <!-- <button onclick="logout()" >logout</button> -->
+<body onload="onAuth(),updata()">
+    <div id="loader"></div>
         <nav>
             <button id="menu">MENU</button>
             <header>
@@ -20,7 +21,7 @@
             </header>
             <form id="add">
                 <input class="inputModule" type="text" placeholder="module name">
-                <button type="submit" >ADD</button>
+                <button type="button" onclick="updata()" >ADD</button>
             </form>
             
             <ul id="boxmenu" class="box-user">
@@ -30,19 +31,20 @@
                     </a>
                     <ul class="menu-item">   
                         <li>
-                            <a href="" >
+                            <!-- <a href="../../AdminST/account.html"  -->
+                            <a onclick="user()">
                                 Account
                             </a>
                         </li>
                         <li>
-                            <a id="logout">
+                            <a id="logout" onclick="logout()">
                                 LogOut
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li class="menu-title">
-                    <a id="data" href="../../Historydata/showdata.html">
+                    <a id="data" onclick="updata()" >
                         Data
                      </a>
                 </li>
