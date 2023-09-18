@@ -3,8 +3,9 @@ var add = document.getElementById('add');
 var input = document.querySelector('.inputModule')
 var openmenu = document.getElementById("boxmenu");
 var listMd = document.querySelector('.bodyvalue')
-
 // ----------------------------------------------------------------------------->
+
+// ------------------------Open menu in mobile web------------------------------>
 document.getElementById('menu').addEventListener('click', () => {
   openmenu.classList.toggle("openmenu");
 }) 
@@ -64,19 +65,14 @@ function deleteModule (name) {
   })
   localStorage.setItem('ModuleName',JSON.stringify(modulearray))
   UpdateListModule(modulearray)
-  location.reload()
+  // location.reload()
 }
 
 // ----------HIEN THI TUNG PHAN TU CUA LISTMODULE TRUYEN VAO RA GIAO DIEN ----------------->
 function UpdateListModule (listModule = []) {
   let body = '<ul>'
   listModule.forEach((value) => {
-    
     let address = value.name;
-    // listenData("L"+address,"tL"+address,value.name+"/DataLED","LED");
-    // listenData("M"+address,"tM"+address,value.name+"/DataDC","Máy Bơm");
-    // listenDataSensor(address,'Humidity');
-    // listenDataSensor(address,'Temperature');
     body += `
     <div class="bodyvalue">
     <ul>
@@ -157,13 +153,24 @@ function UpdateListModule (listModule = []) {
     `
   })
   body += '<ul>'
-  document.querySelector('#listbody').innerHTML=body
+  document.querySelector('#listbody').innerHTML=body;
+  listModule.forEach((value) => {
+    let address = value.name;
+    listenData("L"+address,"tL"+address,value.name+"/DataLED","LED");
+    listenData("M"+address,"tM"+address,value.name+"/DataDC","Máy Bơm");
+    listenDataSensor(address,'Humidity');
+    listenDataSensor(address,'Temperature');
+  })
 
 }
+
+// ----------------------------------------------------------------------------->
 function updata () {
   let dataLocal = getLocalModuleName();
   UpdateListModule(dataLocal);
 }
+
+// --------------------THAY DOI GIA TRI DATA TREN REALTIME THEO GIA TRI CUA SW------------------------------>
 function switchClick(namesw,name,message) {
   let isclass = document.getElementById(namesw).classList.contains("on")
   if(isclass) 
@@ -177,6 +184,7 @@ function switchClick(namesw,name,message) {
     updateData("IOT/"+name,message,"1")
   }
 }
+// ----------------------------------------------------------------------------->
 function showdata (value,sensorName,moduleName) {
   var cshow = document.getElementById(moduleName+sensorName)
   let S = ~~ (value/10);  // chia lay phan nguyen
@@ -200,21 +208,26 @@ function showdata (value,sensorName,moduleName) {
       valueshow.style.color = "red"
   }
 }
-
+// ----------------------------------------------------------------------------->
 function logout () {
   localStorage.setItem('islogin','null');
   window.location.href = "../../../index.html"
-  alert('sldf');
   window.history.pushState(null, "", window.location.href);        
 window.onpopstate = function() {
     window.history.pushState(null, "", window.location.href);
 };
 
 }
+
+// ----------------------------------------------------------------------------->
+// KIEM TRA XEM TK CON DANG NHAP HAY DA DANG XUAT 
 const onAuth = () => {
   if(!(localStorage.getItem('islogin') == 'true'))
     window.location.href = "../../../errorpage.html"
  }
+
+
+ // ----------------------------------------------------------------------------->
  window.addEventListener('load', function () {
   const loader = document.getElementById('loader');
   setTimeout(function() {

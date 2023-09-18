@@ -18,17 +18,6 @@ function updateData (path,key,value) {
  }
 
  
-// -------------------------------SIGN OUT FIREBASE----------------------------->
-
-// document.getElementById("logout").addEventListener('click', () => {
-//    firebase.auth().signOut().then(() => {
-//       alert("out")
-//      window.location.href = "../../../index.html"
-//    }).catch((error) => {
-//      console.log(error.message)
-//    });
-//  })
- 
 
 
  function listenData (idsw,idtext,path,message) {

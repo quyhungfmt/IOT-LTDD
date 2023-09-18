@@ -4,16 +4,9 @@ var error_email = document.getElementById("lineEmail")
 var error_pass = document.getElementById("linePass")
 var titleE = document.getElementById("titleE")
 var titleP = document.getElementById("titleP")
-window.history.pushState(null, "", window.location.href);        
-window.onpopstate = function() {
-    window.history.pushState(null, "", window.location.href);
-};
-// history.pushState(null , null, location.href);
-// window.onpopstate = function() {
-//     history.go(1);
-//   }
 
-
+// ----------------------------------------------------------------------------->
+// CAC KIEU VALIDATE TRA VE TEXT KHI NHAP EMAIL PASS
 function style_error (x) {
     switch(x){
         case 1:
@@ -48,6 +41,9 @@ function style_error (x) {
             break;
     }
 }
+
+// ----------------------------------------------------------------------------->
+// 
 const showTitle = (title,ishow) => {
     if(ishow)
     {
@@ -63,14 +59,20 @@ const showTitle = (title,ishow) => {
         title.style.color = "transparent"
     }
 }
+
+// ----------------------------------------------------------------------------->
 const showtitleE = () => {
     var emailvalue = document.getElementById("inputEmail").value;
     emailvalue != "" ? showTitle(titleE,1) : showTitle(titleE,0)
 }
+// ----------------------------------------------------------------------------->
 const showtitleP = () => {
     var passvalue = document.getElementById("inputPass").value;
     passvalue != "" ? showTitle(titleP,1) : showTitle(titleP,0)
 }
+
+
+// ----------------------------------------------------------------------------->
 
 function validateEmail () {
     var emailvalue = document.getElementById("inputEmail").value;
@@ -79,12 +81,14 @@ function validateEmail () {
     else style_error(2)
 
 }
+// ----------------------------------------------------------------------------->
 function validatePass () {
     var passvalue = document.getElementById("inputPass").value;
     if(passvalue == "") style_error(3)
     else if(passvalue.length <6 && passvalue.length >0) style_error(4)
     else if(passvalue.length >= 6) style_error(5);
 }
+// -------------------------LOGIN ------------------------------------>
 const loginse = () => {
     var passvalue = document.getElementById("inputPass").value;
     var emailvalue = document.getElementById("inputEmail").value;
@@ -107,6 +111,8 @@ const loginse = () => {
       }
     });
 }
+
+
 function validationLogin () {
     var passvalue = document.getElementById("inputPass").value;
     var emailvalue = document.getElementById("inputEmail").value;
